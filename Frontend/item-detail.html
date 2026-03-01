@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Item Details | CampusRent</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="item-detail-container">
+
+  <div class="item-detail-card">
+
+    <div class="item-image-section">
+      <img id="itemImage" src="" alt="Item Image">
+    </div>
+
+    <div class="item-info-section">
+      <h2 id="itemTitle"></h2>
+      <p id="itemLocation"></p>
+      <p id="itemDescription"></p>
+
+      <h3 id="itemPrice"></h3>
+
+      <label>Select Duration:</label>
+      <select id="rentDuration">
+        <option value="1">1 Month</option>
+        <option value="3">3 Months</option>
+        <option value="6">6 Months</option>
+      </select>
+
+      <br><br>
+
+      <button onclick="rentItem()" class="btn-primary">
+        Rent Now
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="item-detail.js"></script>
+</body>
+</html>
