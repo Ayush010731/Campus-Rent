@@ -988,7 +988,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   try {
     const response = await fetch(
-      "http://127.0.0.1:8000/api/items/?owner=me",
+      "http://campus-rent-jcul.onrender.com/api/items/?owner=me",
       {
         headers: { Authorization: "Bearer " + token },
       }
@@ -1086,7 +1086,7 @@ document.getElementById("addItemForm").addEventListener("submit", async function
   formData.append("is_available", true);
 
   try {
-    const response = await fetch("http://127.0.0.1:8000/api/items/", {
+    const response = await fetch("http://campus-rent-jcul.onrender.com/api/items/", {
       method: "POST",
       headers: { Authorization: "Bearer " + token },
       body: formData,
@@ -1109,7 +1109,7 @@ document.getElementById("addItemForm").addEventListener("submit", async function
 async function deleteItem(id) {
   const token = localStorage.getItem("access");
   if (!confirm("Delete this item?")) return;
-  await fetch(`http://127.0.0.1:8000/api/items/${id}/`, {
+  await fetch(`http://campus-rent-jcul.onrender.com/api/items/${id}/`, {
     method: "DELETE",
     headers: { Authorization: "Bearer " + token },
   });
@@ -1123,7 +1123,7 @@ async function loadCategories() {
 
   try {
     const response = await fetch(
-      "http://127.0.0.1:8000/api/categories/",
+      "http://campus-rent-jcul.onrender.com/api/categories/",
       {
         headers: {
           "Authorization": "Bearer " + token
@@ -1181,7 +1181,7 @@ async function loadOwnerRequests() {
   const token = localStorage.getItem("access");
 
   const response = await fetch(
-    "http://127.0.0.1:8000/api/rentals/owner/requests/",
+    "http://campus-rent-jcul.onrender.com/api/rentals/owner/requests/",
     {
       headers: {
         "Authorization": "Bearer " + token
@@ -1222,7 +1222,7 @@ async function handleRentalAction(rentalId, action) {
   const token = localStorage.getItem("access");
 
   const response = await fetch(
-    `http://127.0.0.1:8000/api/rentals/action/${rentalId}/`,
+    `http://campus-rent-jcul.onrender.com/api/rentals/action/${rentalId}/`,
     {
       method: "POST",
       headers: {

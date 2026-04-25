@@ -552,7 +552,7 @@ document.getElementById('listItemForm').addEventListener('submit', function(e) {
   submitBtn.textContent = "Uploading...";
   submitBtn.disabled = true;
 
-  fetch("http://127.0.0.1:8000/api/items/", {
+  fetch("http://campus-rent-jcul.onrender.com/api/items/", {
     method: "POST",
     headers: {
       "Authorization": "Bearer " + token

@@ -20,7 +20,7 @@ async function loadAvailableItems(category = "") {
 
   const token = localStorage.getItem("access");
 
-  let url = "http://127.0.0.1:8000/api/items/?is_available=true";
+  let url = "http://campus-rent-jcul.onrender.com/api/items/?is_available=true";
 
   if (category) {
     url += `&category=${category}`;
@@ -84,7 +84,7 @@ async function rentItem(itemId) {
   const token = localStorage.getItem("access");
 
   const response = await fetch(
-    `http://127.0.0.1:8000/api/rentals/request/${itemId}/`,
+    `http://campus-rent-jcul.onrender.com/api/rentals/request/${itemId}/`,
     {
       method: "POST",
       headers: {
@@ -108,7 +108,7 @@ async function loadUserProfile() {
 
   try {
     const response = await fetch(
-      "http://127.0.0.1:8000/api/accounts/profile/",
+      "http://campus-rent-jcul.onrender.com/api/accounts/profile/",
       {
         headers: {
           "Authorization": "Bearer " + token
@@ -152,7 +152,7 @@ async function loadActiveRentals() {
   const token = localStorage.getItem("access");
 
   const response = await fetch(
-    "http://127.0.0.1:8000/api/rentals/renter/active/",
+    "http://campus-rent-jcul.onrender.com/api/rentals/renter/active/",
     {
       headers: {
         "Authorization": "Bearer " + token
@@ -176,7 +176,7 @@ async function loadActiveRentals() {
     <div class="item-card">
       <div class="item-image">
         ${rental.image 
-          ? `<img src="http://127.0.0.1:8000${rental.image}" style="width:100%;height:100%;object-fit:cover;">`
+          ? `<img src="http://campus-rent-jcul.onrender.com${rental.image}" style="width:100%;height:100%;object-fit:cover;">`
           : "📦"}
       </div>
       <div class="item-details">
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 async function loadCategoryItems(location, category, search) {
 
-  let url = "http://127.0.0.1:8000/api/items/?is_available=true";
+  let url = "http://campus-rent-jcul.onrender.com/api/items/?is_available=true";
 
   if (category) {
     url += `&category=${category}`;
@@ -274,7 +274,7 @@ async function loadCategoryItems(location, category, search) {
   data.forEach(item => {
     container.innerHTML += `
       <div class="item-card">
-        <img src="http://127.0.0.1:8000${item.image}">
+        <img src="http://campus-rent-jcul.onrender.com${item.image}">
         <h3>${item.title}</h3>
         <p>₹${item.price}/mo</p>
       </div>
