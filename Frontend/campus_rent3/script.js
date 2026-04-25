@@ -33,7 +33,7 @@ if (menuToggle && navLinks) {
 }
 
 
-const currentPage = window.location.pathname.split("/").pop() || "home1.html";
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
 // Highlight active link
 document.querySelectorAll(".nav-link").forEach(link => {
@@ -1272,7 +1272,7 @@ function logoutUser() {
     localStorage.removeItem('campusrent_user');
     showNotification('Logged out successfully!', 'success');
     setTimeout(() => {
-      window.location.href = 'home1.html'
+      window.location.href = 'index.html'
     }, 1000);
   }
 }
