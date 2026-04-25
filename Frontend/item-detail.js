@@ -5,7 +5,7 @@ const itemId = params.get("id");
 async function loadItemDetails() {
 
   const response = await fetch(
-    `http://campus-rent-jcul.onrender.com/api/items/${itemId}/`,
+    `https://campus-rent-jcul.onrender.com/api/items/${itemId}/`,
     {
       headers: {
         "Authorization": "Bearer " + token
@@ -22,14 +22,14 @@ async function loadItemDetails() {
 
   document.getElementById("itemImage").src =
     item.image
-      ? "http://campus-rent-jcul.onrender.com" + item.image
+      ? "https://campus-rent-jcul.onrender.com" + item.image
       : "default.png";
 }
 
 async function rentItem() {
 
   const response = await fetch(
-    `http://campus-rent-jcul.onrender.com/api/rentals/request/${itemId}/`,
+    `https://campus-rent-jcul.onrender.com/api/rentals/request/${itemId}/`,
     {
       method: "POST",
       headers: {

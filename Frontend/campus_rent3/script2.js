@@ -26,7 +26,7 @@ if (loginForm) {
         const password = document.getElementById("password").value.trim();
 
         try {
-            const response = await fetch("http://campus-rent-jcul.onrender.com/api/accounts/login/", {
+            const response = await fetch("https://campus-rent-jcul.onrender.com/api/accounts/login/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password })
@@ -84,7 +84,7 @@ if (signupForm) {
         }
 
         try {
-            const response = await fetch("http://campus-rent-jcul.onrender.com/api/accounts/signup/", {
+            const response = await fetch("https://campus-rent-jcul.onrender.com/api/accounts/signup/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
